@@ -1,0 +1,66 @@
+{
+  "version": "hlr-v2",
+  "formula": "log2(h_days) = intercept + w_correct*sqrt(1+correct) + w_wrong*sqrt(1+wrong); p = 2^(-t_days/h_days)",
+  "intercept": 5.938361999953164,
+  "w_correct": 0.09741891008618403,
+  "w_wrong": -0.602679947698708,
+  "h_min_days": 0.010416666666666666,
+  "h_max_days": 274.0,
+  "ridge_alpha": 0.01,
+  "target_recall": 0.9,
+  "rating_mapping": {
+    "right": [
+      "OK",
+      "Solid"
+    ],
+    "wrong": [
+      "Blank",
+      "Shaky"
+    ]
+  },
+  "trained_on": "Duolingo half-life regression release, duplicates removed, 1M-row sample, learner-held-out split, seed 42",
+  "test_cases": [
+    {
+      "right": 0,
+      "wrong": 1,
+      "days": 0.0,
+      "half_life_days": 36.33940150934657,
+      "p": 1.0
+    },
+    {
+      "right": 1,
+      "wrong": 0,
+      "days": 3.0,
+      "half_life_days": 44.429721597004,
+      "p": 0.9542754297053789
+    },
+    {
+      "right": 2,
+      "wrong": 1,
+      "days": 7.0,
+      "half_life_days": 38.18087726139038,
+      "p": 0.8806631156589161
+    },
+    {
+      "right": 0,
+      "wrong": 3,
+      "days": 14.0,
+      "half_life_days": 28.451267380256784,
+      "p": 0.7110044685679207
+    },
+    {
+      "right": 5,
+      "wrong": 2,
+      "days": 30.0,
+      "half_life_days": 35.093120433349064,
+      "p": 0.552915757220068
+    },
+    {
+      "right": 3,
+      "wrong": 0,
+      "days": 2.5,
+      "half_life_days": 46.222387405872574,
+      "p": 0.963204244603894
+    }
+  ]
+}
